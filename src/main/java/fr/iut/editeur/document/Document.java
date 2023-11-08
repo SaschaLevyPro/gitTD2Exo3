@@ -37,7 +37,7 @@ public class Document {
         remplacer(start, end, "");
     }
     public void clear() {
-        texte = "e";
+        texte = "";
     }
 
 }
