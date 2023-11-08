@@ -1,0 +1,9 @@
+/target/classes/fr/iut/editeur/commande/Commande.class
+/target/classes/fr/iut/editeur/commande/CommandeAjouter.class
+/target/classes/fr/iut/editeur/commande/CommandeDocument.class
+/target/classes/fr/iut/editeur/commande/factory/CommandeFactory.class
+/target/classes/fr/iut/editeur/commande/invoker/CommandeInvoker.class
+/target/classes/fr/iut/editeur/commande/CommandeMajuscules.class
+/target/classes/fr/iut/editeur/commande/CommandeRemplacer.class
+/target/classes/fr/iut/editeur/document/Document.class
+/target/classes/fr/iut/editeur/Main.class
