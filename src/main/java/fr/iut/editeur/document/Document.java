@@ -2,48 +2,48 @@ package fr.iut.editeur.document;
 
 public class Document {
 
-    private String texte;
+    private String texteDocument;
 
     public Document() {
-        this.texte = "";
+        this.texteDocument = "";
     }
 	
     public String getTexte() {
-        return texte;
+        return texteDocument;
     }
 
     public void setTexte(String texte) {
-        this.texte = texte;
+        this.texteDocument = texte;
     }
 
     public void ajouter(String texte) {
-        this.texte += texte;
+        this.texteDocument += texte;
     }
 
     @Override
     public String toString() {
-        return this.texte;
+        return this.texteDocument;
     }
 
     public void remplacer(int start, int end, String remplacement) {
-        String leftPart = texte.substring(0, start);
-        String rightPart = texte.substring(end);
-        texte = leftPart + remplacement + rightPart;
+        String leftPart = texteDocument.substring(0, start);
+        String rightPart = texteDocument.substring(end);
+        texteDocument = leftPart + remplacement + rightPart;
     }
     public void majuscules(int start, int end) {
-        remplacer(start, end, texte.substring(start, end).toUpperCase());
+        remplacer(start, end, texteDocument.substring(start, end).toUpperCase());
     }
-    public void minuscules(int start, int end) {remplacer(start, end, texte.substring(start, end).toLowerCase());}
+    public void minuscules(int start, int end) {remplacer(start, end, texteDocument.substring(start, end).toLowerCase());}
     public void effacer(int start, int end) {
         remplacer(start, end, "");
     }
     public void clear() {
-        texte = "";
+        texteDocument = "";
     }
     public void inserer(int position, String texte) {
-        String leftPart = this.texte.substring(0, position);
-        String rightPart = this.texte.substring(position);
-        this.texte = leftPart + texte + rightPart;
+        String leftPart = this.texteDocument.substring(0, position);
+        String rightPart = this.texteDocument.substring(position);
+        this.texteDocument = leftPart + texte + rightPart;
     }
 
 }
