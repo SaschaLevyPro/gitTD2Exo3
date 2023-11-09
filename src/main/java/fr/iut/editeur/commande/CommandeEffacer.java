@@ -15,9 +15,4 @@ public class CommandeEffacer extends CommandeDocument {
         this.document.effacer(start, end);
         super.executer();
     }
-
-    @Override
-    public void getDescriptionCommande() {
-        System.out.println("Effacer");
-    }
 }
