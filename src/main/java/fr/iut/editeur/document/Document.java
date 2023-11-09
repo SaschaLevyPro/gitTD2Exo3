@@ -3,7 +3,6 @@ package fr.iut.editeur.document;
 public class Document {
 
     private String texteDocument;
-    private String contentDocument;
 
     public Document() {
         this.texteDocument = "";
@@ -22,11 +21,11 @@ public class Document {
     }
 
     public String getContentDocument() {
-        return contentDocument;
+        return texteDocument;
     }
 
     public void setContentDocument(String contentDocument) {
-        this.contentDocument = contentDocument;
+        this.texteDocument = contentDocument;
     }
 
 
@@ -36,17 +35,17 @@ public class Document {
     }
 
     public void remplacer(int start, int end, String remplacement) {
-        String leftPart = contentDocument.substring(0, start);
-        String rightPart = contentDocument.substring(end);
-        contentDocument = leftPart + remplacement + rightPart;
+        String leftPart = texteDocument.substring(0, start);
+        String rightPart = texteDocument.substring(end);
+        texteDocument = leftPart + remplacement + rightPart;
     }
 
     public void majuscules(int start, int end) {
-        remplacer(start, end, contentDocument.substring(start, end).toUpperCase());
+        remplacer(start, end, texteDocument.substring(start, end).toUpperCase());
     }
 
     public void minuscules(int start, int end) {
-        remplacer(start, end, contentDocument.substring(start, end).toLowerCase());
+        remplacer(start, end, texteDocument.substring(start, end).toLowerCase());
     }
 
     public void effacer(int start, int end) {
@@ -61,7 +60,7 @@ public class Document {
         String leftPart = this.texteDocument.substring(0, position);
         String rightPart = this.texteDocument.substring(position);
         this.texteDocument = leftPart + texte + rightPart;
-        contentDocument = "";
+        texteDocument = "";
     }
 
 }
