@@ -13,6 +13,11 @@ public class CommandeInserer extends CommandeDocument {
             System.err.println("Format attendu : inserer;position;texte");
             return;
         }
+        int position = Integer.parseInt(parameters[1]);
+        position++;
+        String texte = parameters[2];
+        this.document.inserer(position, texte);
+        super.executer();
     }
 
 

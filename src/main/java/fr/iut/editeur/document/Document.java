@@ -39,10 +39,10 @@ public class Document {
     public void clear() {
         texte = "";
     }
-    public void inserer(int position) {
-        String leftPart = texte.substring(0, position);
-        String rightPart = texte.substring(position);
-        texte = leftPart + rightPart;
+    public void inserer(int position, String texte) {
+        String leftPart = this.texte.substring(0, position);
+        String rightPart = this.texte.substring(position);
+        this.texte = leftPart + texte + rightPart;
     }
 
 }
