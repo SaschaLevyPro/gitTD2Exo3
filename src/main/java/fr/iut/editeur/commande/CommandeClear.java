@@ -14,4 +14,9 @@ public class CommandeClear extends CommandeDocument{
         this.document.clear();
         super.executer();
     }
+
+    @Override
+    public void getDescriptionCommande() {
+    	System.out.println("Clear");
+    }
 }

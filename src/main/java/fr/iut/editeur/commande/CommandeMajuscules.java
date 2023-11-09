@@ -17,4 +17,9 @@ public class CommandeMajuscules extends CommandeDocument{
         super.executer();
     }
 
+    @Override
+    public void getDescriptionCommande() {
+        System.out.println("Majuscules");
+    }
+
 }
