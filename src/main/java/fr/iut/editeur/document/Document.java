@@ -2,48 +2,48 @@ package fr.iut.editeur.document;
 
 public class Document {
 
-    private String texte;
+    private String contentDocument;
 
     public Document() {
-        this.texte = "";
+        this.contentDocument = "";
     }
 	
-    public String getTexte() {
-        return texte;
+    public String getContentDocument() {
+        return contentDocument;
     }
 
-    public void setTexte(String texte) {
-        this.texte = texte;
+    public void setContentDocument(String contentDocument) {
+        this.contentDocument = contentDocument;
     }
 
     public void ajouter(String texte) {
-        this.texte += texte;
+        this.contentDocument += texte;
     }
 
     @Override
     public String toString() {
-        return this.texte;
+        return this.contentDocument;
     }
 
     public void remplacer(int start, int end, String remplacement) {
-        String leftPart = texte.substring(0, start);
-        String rightPart = texte.substring(end);
-        texte = leftPart + remplacement + rightPart;
+        String leftPart = contentDocument.substring(0, start);
+        String rightPart = contentDocument.substring(end);
+        contentDocument = leftPart + remplacement + rightPart;
     }
     public void majuscules(int start, int end) {
-        remplacer(start, end, texte.substring(start, end).toUpperCase());
+        remplacer(start, end, contentDocument.substring(start, end).toUpperCase());
     }
-    public void minuscules(int start, int end) {remplacer(start, end, texte.substring(start, end).toLowerCase());}
+    public void minuscules(int start, int end) {remplacer(start, end, contentDocument.substring(start, end).toLowerCase());}
     public void effacer(int start, int end) {
         remplacer(start, end, "");
     }
     public void clear() {
-        texte = "";
+        contentDocument = "";
     }
     public void inserer(int position, String texte) {
-        String leftPart = this.texte.substring(0, position);
-        String rightPart = this.texte.substring(position);
-        this.texte = leftPart + texte + rightPart;
+        String leftPart = this.contentDocument.substring(0, position);
+        String rightPart = this.contentDocument.substring(position);
+        this.contentDocument = leftPart + texte + rightPart;
     }
 
 }
