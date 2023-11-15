@@ -1,8 +1,8 @@
-name : update_java_17
+name : tests
 on:
   push:
     branches:
-      - master
+      - '*'
 jobs:
   update:
     runs-on: ubuntu-latest
