@@ -1,0 +1,20 @@
+name : update_java_17
+on:
+  push:
+    branches:
+      - master
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: setUp.java
+        uses: actions/setup-java@v1
+        with:
+                java-version: '17'
+
+      - name: test_maven
+        run : mvn test
